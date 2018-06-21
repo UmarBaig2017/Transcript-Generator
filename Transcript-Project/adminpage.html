@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Page</title>
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.0.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDYePJxuyqZNgUPzvl0J5-fpQ9-hn31mk4",
+    authDomain: "database-8c23a.firebaseapp.com",
+    databaseURL: "https://database-8c23a.firebaseio.com",
+    projectId: "database-8c23a",
+    storageBucket: "database-8c23a.appspot.com",
+    messagingSenderId: "392240308396"
+  };
+  firebase.initializeApp(config);
+</script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div>
+        <input type="submit" value="Signout" id="logout">        
+    </div>  
+    <br/>  
+<h1>
+    Admin Panel
+</h1>
+<div id="main">
+<div id="one">
+   <p id = "text"><b> Personal Information</b></p>
+  <input type="text" id="sn" required autocomplete="off" name="name" placeholder="Name" class="textBox" ></br>
+  <input type="text" id="fn" required autocomplete="off" name="name" placeholder="Father Name" class="textBox" ></br>
+  <input type="text" id="rn" required autocomplete="off" name="name" placeholder="Roll Number" class="textBox" ></br>
+  <input type="text" id="em" required autocomplete="off" name="name" placeholder="Email" class="textBox" ></br>
+  <label for="sem">Semester:</label>
+  <select required id="sem" name="sem">
+      
+      <option>Select Your semester</option>
+      <option value="1">Semester 1</option>
+      <option value="2">Semester 2</option>
+      <option value="3">Semester 3</option>
+      <option value="4">Semester 4</option>
+      <option value="5">Semester 5</option>
+      <option value="6">Semester 6</option>
+      <option value="7">Semester 7</option>
+      <option value="8">Semester 8</option>
+
+      </select></br>
+ <label for="dep">Department:</label>
+  <select required id="dep" name="dep">
+      
+      <option>Select Your Department</option>
+      <option value="Computer Science">Computer Science</option>
+      <option value="Education">Education</option>
+      <option value="Bussiness Administration">Bussiness Administration</option>
+      <option value="Media Science">Media Science</option>
+      <option value="Environmental Science">Environmental Science</option>
+     </select>
+     </div>
+     <br/>
+     <div id="two">
+     <p id = "text">
+        <b> Marksheet Credentials</b></p>
+        <label>Subject 1 : </label>
+    <input required type="text" name="name" placeholder="Subject Name" class="textBox subject" >
+    <input required id = "Mark1" type="text" name="name" placeholder="Marks" class="textBox" ></br>
+     <label>Subject 2 : </label>
+    <input required type="text" name="name" placeholder="Subject Name" class="textBox subject" >
+    <input required id = "Mark2" type="text" name="name" placeholder="Marks" class="textBox" ></br>
+     <label>Subject 3 : </label>
+    <input required type="text" name="name" placeholder="Subject Name" class="textBox subject" >
+    <input required id = "Mark3" type="text" name="name" placeholder="Marks" class="textBox" ></br>
+     <label>Subject 4 : </label>
+    <input required type="text" name="name" placeholder="Subject Name" class="textBox subject" >
+    <input id = "Mark4" type="text" name="name" placeholder="Marks" class="textBox" > 
+    <span id="icon"></span>
+</br>
+  <!--   <label>Subject 5 : </label>
+    <input type="text" name="name" placeholder="Subject Name" class="textBox" >
+    <input id = "Subject" type="text" name="name" placeholder="Marks" class="textBox" ></br>
+     <label>Subject 6 : </label>
+    <input type="text" name="name" placeholder="Subject Name" class="textBox" >
+    <input id = "Subject" type="text" name="name" placeholder="Marks" class="textBox" ></br>
+  -->
+  <div id="additional"></div>
+
+    <label for="img">
+        <pre>Upload picture</pre>
+            <input type="file" value="upload" id="filebutton" accept="image/*"/><br/>
+            <input type="submit" value="Submit" id="submit">
+   
+</label>
+</div>
+</div>
+<aside>
+ <div id = "sidebar">
+     <p id= "sidetext">
+         Transcripts
+     </p>
+     <ul id="saved">
+     </ul>
+ </div>
+</aside>
+   <script src="main.js"></script>
+
+</table>
+</body>
+</html>

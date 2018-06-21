@@ -1,0 +1,23 @@
+body{
+    background: url('bw.jpg');
+    color: white;
+    font-weight: bolder;
+    font-style: oblique;
+}
+fieldset{
+    width: 300px;
+    border-radius: 40px;
+    margin: 20% 40%;
+    border: 7px groove grey;
+}
+label{
+    width:85px;
+    display: inline-block;
+}
+input{
+    margin-bottom: 7px;
+}
+button{
+    float: right;
+    width: 100px;
+}

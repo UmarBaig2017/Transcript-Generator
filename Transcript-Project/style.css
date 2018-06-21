@@ -1,0 +1,105 @@
+body{
+    background: url('texture.jpg')
+}
+#logout{
+    border-radius: 15px;
+    float: right;
+    background: cadetblue;
+    color: white;
+    text-decoration: underline;
+    font-size: 1.4em;
+}
+h1{
+    font-size: 50px;
+    text-align: center;
+    border: solid;
+    border-bottom-width: 10px;
+    border-style: outset;
+    color: black;
+-moz-box-shadow: 5px 5px 5px 5px #777777;   
+-webkit-box-shadow: 5px 5px 5px 5px #777777; 
+box-shadow: 5px 5px 5px 5px #777777;
+border-width: 10px;
+border-color: cadetblue;
+color: darkolivegreen;
+    background-color: lightblue;
+
+}
+.textBox{
+    width: 200px;
+    height: 20px;
+    border-style: outset;
+    border-radius: 15%;
+    margin-bottom: 4px;
+    margin-left: 10px; 
+    background-color: honeydew;
+}  
+p{
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    border: 2px solid black;
+    border-block-start-width: 5px;
+    border-bottom-right-radius: 30px;
+    width: 500px;
+    color: darkolivegreen;
+    background-color: #f3e7cd;
+    border-color: cadetblue;
+   
+}
+label{
+    font-size: 15px;
+}
+.remove{
+    color: rgb(85, 0, 0);
+}
+.remove:hover{
+    color: rgb(153, 9, 9);
+    font-size: 1.4em;
+}
+#sem{
+    margin-left:  15px;
+}
+#Subject{
+margin-left: 4px;
+}
+
+label{
+    color: blue;
+
+}
+#submit{
+    margin-top: 10px;
+    float: right;
+    font-size: 1.6em;
+}
+#sidebar{
+    float: right;
+    position: relative;
+    background-color: white;
+    height: 500px;
+    width:300px;
+}
+#sidebar ul{
+    list-style-type: none;
+}
+#sidebar li{
+    margin-top: 0.8em;
+}
+#sidebar a{
+    font-size: 1.4em;
+}
+#sidetext{
+    width:230px;
+    margin-left:30px;
+    
+}
+#one{
+    display: flow-root;
+}
+#two{
+    display: block;
+    float: left;
+}
+#main{
+    float: left;
+}

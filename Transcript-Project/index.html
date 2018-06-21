@@ -1,0 +1,135 @@
+<!--My login page-->
+
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Sign-Up/Login Form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDYePJxuyqZNgUPzvl0J5-fpQ9-hn31mk4",
+      authDomain: "database-8c23a.firebaseapp.com",
+      databaseURL: "https://database-8c23a.firebaseio.com",
+      projectId: "database-8c23a",
+      storageBucket: "",
+      messagingSenderId: "392240308396"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="platform.js"></script>
+ <link rel="stylesheet" href="static/assets/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="static/assets/css/normalize.min.css">
+
+  
+      <link rel="stylesheet" href="static/assets/css/style.css">
+      <link rel="stylesheet" href="static/assets/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/assets/css//bootstrap-social.min.css">
+</head>
+
+<body>
+  <h1 id="Welcome">Welcome to Online Transcript Generator and Viewer</h1>
+  <div class="form">
+      
+      <ul class="tab-group">
+        <li class="tab active"><a href="#signup">User Login</a></li>
+        <li class="tab"><a href="#login">Admin Login</a></li>
+      </ul>
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h1>User Login</h1>
+          
+          <form id="frm">
+          
+          <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input type="email"required autocomplete="off" name="email" id="em" />
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+             Password<span class="req">*</span>
+            </label>
+            <input type="password"required autocomplete="off" name="Password" id="pw"/>
+          </div>
+          
+          <button type="submit" id="reg" class="button button-block"/>Login</button><br/>
+          <a onclick="googlesign()" id="gog" class="btn btn-block btn-social btn-google signing">
+            <span class="fa fa-google"></span> +++++++++++</a>
+          </form>
+
+          
+
+        </div>
+        
+        <div id="login">   
+          <h1>Admin Login</h1>
+          
+          <form id="adlog">
+          
+            <div class="field-wrap">
+            <label>
+              Email Address<span class="req">*</span>
+            </label>
+            <input id="adem" type="email"required autocomplete="off" name="checkEmail"/>
+          </div>
+          
+          <div class="field-wrap">
+            <label>
+              Password<span class="req">*</span>
+            </label>
+            <input id="adpw" type="password"required autocomplete="off" name="checkPW"/>
+          </div>
+          
+          
+          <button class="button button-block"/>Log In</button>
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+
+</div> 
+    <script src="static/assets/js/jquery.min.js"></script>
+    <script src="static/assets/js/index.js"></script>
+    <script src="static/assets/js/app.js"></script>
+    <script>
+    function googlesign(){
+      event.preventDefault();
+      var provider = new firebase.auth.GoogleAuthProvider();
+      firebase.auth().signInWithPopup(provider).then(function(result) {
+        // This gives you a Google Access Token. You can use it to access the Google API.
+        var token = result.credential.accessToken;
+        // The signed-in user info.
+        var user = result.user;
+        // ...
+        console.log(user.email)
+        var sign = {}
+        sign.em = user.email;
+        sign.password = 'rijodfc';
+        localStorage.setItem('render',JSON.stringify(sign));
+        window.location='./transcript.html'
+      }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        console.log(errorCode)
+        var errorMessage = error.message;
+        // The email of the user's account used.
+        var email = error.email;
+        // The firebase.auth.AuthCredential type that was used.
+        var credential = error.credential;
+        // ...
+      })
+    }
+    </script>
+
+</body>
+</html>

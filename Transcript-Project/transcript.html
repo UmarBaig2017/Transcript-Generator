@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Marksheet</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="markstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDpgqwXeU_PR_trFRVF7H55JHTLVgo4l6A",
+        authDomain: "onlinetranscript.firebaseapp.com",
+        databaseURL: "https://onlinetranscript.firebaseio.com",
+        projectId: "onlinetranscript",
+        storageBucket: "onlinetranscript.appspot.com",
+        messagingSenderId: "253131396018"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>    
+    
+</head>
+
+<body>
+    <div id="pict">
+    <h1>
+        Transcript
+    </h1>
+    <p>00000001</p>
+    <p></p>
+    <div id="tab">
+        <table>
+            <tr>
+                <th scope="row" class="khm">Name:</th>
+                <td class="khu" id="sName"></td>
+            </tr>
+
+        </table>
+        <table>
+            <tr>
+                <th scope="row" class="khm">Father Name:</th>
+                <td class="khu" id="fName"></td>
+            </tr>
+
+        </table>
+        <table>
+            <tr>
+                <th scope="row" class="khm">Roll No:</th>
+                <td class="khu" id="roll"></td>
+            </tr>
+        </table>
+        <table>
+            <tr>
+                <th scope="row" class="khm">Email:</th>
+                <td class="khu" id="em"></td>
+            </tr>
+
+        </table>
+
+        <table>
+            <tr>
+                <th scope="row" class="khm">Semester:</th>
+                <td class="khu" id="sem"></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th scope="row" class="khm">Department:</th>
+                <td class="khu" id="dep"></td>
+            </tr>
+        </table>
+    </div>
+    <div><img src="index.jpg" alt="index" width="150px" height="100px" id="pic"></div>
+    <center>
+
+        <table id="marks" border="6" class="table table-responsive table-hover">
+
+            <tr>
+                <th>
+                    Subject
+                </th>
+                <th>
+                    Obtained Marks
+                </th>
+                <th>
+                    Max. Marks
+                </th>
+                <th>
+                    Grade
+                </th>
+                <th>
+                    Remarks
+                </th>
+
+
+            </tr>
+        </table>
+    </center>
+</div>
+<div id="down"><i class="fa fa-download btn" aria-hidden="true"></i></div>
+    <script src="marks.js"></script>
+    <script>
+    
+    
+    </script>
+</body>
+
+</html>
